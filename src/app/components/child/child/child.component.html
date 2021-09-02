@@ -2,10 +2,10 @@
     <h3>Child Component</h3>
     <div class="row">
         <div class="col-md-6">
-            Counter :
+            Counter : {{parentData}} 
         </div>
     </div>
     <div class="col-md-6">
-        <button type="button" class="btn btn-light">Send via @Outout</button>
+        <button type="button" (click)="onClick2Parent()" class="btn btn-light">Send via @Outout</button>
     </div>
 </div>
