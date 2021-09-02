@@ -4,15 +4,16 @@
         <div class="col-md-6">
             <div class="form-group">
                 <input type="text" class="form-control">
-                <small id="helpID" class="form-text text-white">Help text</small>
+                <small id="helpId" class="form-text text-white">Help text</small>
             </div>
         </div>
         <div class="col-md-6">Counter : </div>
     </div>
     <div class="row">
         <div class="col-md-6">
-            <button type="button" class="btn btn-success">Send via @Input</button>
-            <button type="button" class="btn btn-danger">Send via 2ViewChild</button>
+            <button type="button" (click)="onClick2Child()" 
+                class="btn btn-success">Send via @Input</button>
+            <button type="button" class="btn btn-danger">Send via @ViewChild</button>
         </div>
         <div class="col-md-6">
             <button type="button" class="btn btn-light">Show Child</button>
@@ -20,7 +21,7 @@
     </div>
     <div class="row">
         <div class="col-md-12">
-            <app-child></app-child>
+            <app-child [parentData]="parentData"></app-child>
         </div>
     </div>
 </div>
